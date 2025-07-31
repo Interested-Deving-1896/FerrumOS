@@ -7,6 +7,8 @@
 
 `FerrumOS` is an experimental operating system written in **Rust**. It utilizes the **Limine** bootloader for initial system startup and runs within the **QEMU** emulator for development and testing.
 
+This represents the practical part of my Bachelor's thesis. The theoretical part which documents this project can be found in: `./FerrumOS_Thesis`
+
 ### Features
 
 * **4-Level Paging**: `./kernel/src/memory` - Implements 4-Level paging for virtual memory management.
