@@ -1,61 +1,75 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# FerrumOS
 
-## `FerrumOS`
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/FerrumOS)
 
----
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-### Description
+## Architecture
 
-`FerrumOS` is an experimental operating system written in **Rust**. It utilizes the **Limine** bootloader for initial system startup and runs within the **QEMU** emulator for development and testing.
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-This represents the practical part of my Bachelor's thesis. The theoretical part which documents this project can be found in: `./FerrumOS_Thesis`
+## Install
 
-### Features
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-* **4-Level Paging**: `./kernel/src/memory` - Implements 4-Level paging for virtual memory management.
-* **Heap Allocation**: `./kernel/src/allocator` - Contains implementations for various allocation algorithms, including: *Bump*, *Linked List*, and *Fixed Size Blocks*.
-* **Interrupts**: `./kernel/src/interrupts` - Uses an external crate to set up an Interrupt Descriptor Table (IDT) and provides handlers for multiple interrupts. It supports both *LAPIC* and *IO-APIC*.
-* **Drivers**: `./kernel/src/drivers`
-    * **ACPI** and **APIC** parsers for hardware discovery and management.
-    * **VGA** and **Linear Framebuffer** for graphics support.
-    * **Text Writer** to enable text output on the screen.
-        * **PSF Font** parser for custom fonts.
-        * **ANSII Parser** that currently supports colored text and cursor manipulation.
-    * **ATA** driver for communication with persistent storage devices.
-* **Async/Await**: `./kernel/src/task` - Implements a simple executor and a keyboard task to enable **cooperative multitasking**.
-* **Timers**: `./kernel/src/timers` - Implements different timers for calibration and general use, supporting **PIT**, **HPET**, and **APIC** timers.
-* **File System**: `./kernel/src/fs` - Implements an **ext2fs** file system that supports reading and writing files, creating and removing files and directories, and listing directory contents.
-* **Shell**: `./kernel/src/shell` - A minimal shell built for feature testing and basic interaction.
+```bash
+git clone https://github.com/Interested-Deving-1896/FerrumOS.git
+cd FerrumOS
+```
 
-### How to Run
+## Usage
 
-To run `FerrumOS`, you'll need QEMU and the Rust `nightly` toolchain.
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-#### Prerequisites
+## Configuration
 
-* **QEMU**: Ensure you have QEMU installed on your system.
-* **Rust Nightly**: Make sure you have the Rust `nightly` toolchain installed. You can install it via `rustup`:
-    ```bash
-    rustup toolchain install nightly
-    rustup default nightly # Or manage with `rustup override set nightly` in the project directory
-    ```
-    *(Note: Using `rustup override set nightly` in your project directory is often preferred to avoid changing your global default Rust toolchain.)*
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-#### Building and Running the OS
+## CI
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/Mufafa98/FerrumOS.git
-    cd FerrumOS
-    ```
-2.  **Build and run the kernel**:
-    Use the provided `Makefile` to easily build and run `FerrumOS` in QEMU.
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
 
-    * To build and run in **release** mode:
-        ```bash
-        make run
-        ```
-    * To build and run in **debug** mode:
-        ```bash
-        make run MODE=d
-        ```
----
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/FerrumOS`](https://github.com/Interested-Deving-1896/FerrumOS) and mirrored through:
+
+```
+Interested-Deving-1896/FerrumOS  ──►  OpenOS-Project-OSP/FerrumOS  ──►  OpenOS-Project-Ecosystem-OOC/FerrumOS
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
